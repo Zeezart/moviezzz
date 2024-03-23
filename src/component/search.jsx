@@ -95,7 +95,7 @@ function Search(){
                     <ModalCloseButton />
                     <ModalBody>
                         <Box display="flex" gap="2rem" alignItems="center" p="1rem" m="1rem 0">
-                            <Image src={selectedMovie?.image} width="10rem"/>
+                            <Image src={selectedMovie?.image} width={{base:"5rem", sm:"5rem", lg:"10rem"}}/>
                             <Box>
                                 <Text fontWeight="bold">{selectedMovie?.title}</Text>
                                 <Text fontSize="0.7rem" color="#e1e1e1">{selectedMovie?.genre}</Text>
