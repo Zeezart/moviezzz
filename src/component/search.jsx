@@ -15,8 +15,11 @@ import {
 
 function Search(){
 
+  //...........save data in state.............
   const [searchTerm, setSearchTerm] = useState('');
 
+
+  //..............filter data based on user input..............
   const filteredData = movieData.filter(item =>
     item.title.toLowerCase()[0] && item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -26,6 +29,8 @@ function Search(){
   };
 
 
+
+  //.........open Modal on click................
   const [selectedMovie, setSelectedMovie] = useState(null)
 
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -36,6 +41,7 @@ function Search(){
       onOpen()
   }
 
+  //...................search on click..........
   const handleSearch = () => {
     return(filteredData)
   }
@@ -55,6 +61,11 @@ function Search(){
                         
         
         </Box>
+
+
+        {/* Display search results */}
+
+        
        {searchTerm === "" ? null : <Box boxShadow="md" bg="#fff" mb="2rem" p="2rem">
           <Box display="flex" justifyContent="space-between" alignItems="center">
           <Text>Search Results</Text>
@@ -99,7 +110,8 @@ function Search(){
                    
                 </ModalContent>
             </Modal>
-            </>
+          </>
+            
         
       </Box>
     )

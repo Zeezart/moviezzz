@@ -1,17 +1,12 @@
 import React, {useState} from "react"
 import {Box, Text,Image, Card, CardBody, Input, Button} from "@chakra-ui/react"
-import movie from "../assets/movie-image.svg"
 import star from "../assets/star.svg"
 import { movieData } from "./data"
-import Search from "./search"
 import { useDisclosure } from "@chakra-ui/react"
-import Modall from "./modal"
 import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
   } from '@chakra-ui/react'
